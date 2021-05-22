@@ -1,0 +1,18 @@
+#bottom {    
+    margin: 0px 0px 0px 0px;
+    text-align:center;
+    color: #ffffff;
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, blue),
+        color-stop(1, blue)
+        );
+    background-image: -o-linear-gradient(bottom, blue 0%, #120205 100%);
+    background-image: -moz-linear-gradient(bottom, blue 0%, #120205 100%);
+    background-image: -webkit-linear-gradient(bottom, blue 0%, #120205 100%);
+    background-image: -ms-linear-gradient(bottom, blue 0%, #120205 100%);
+    background-image: linear-gradient(to bottom, blue 0%, #120205 100%);
+}

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Computer Store</title>         
+    </h:head>
+    <h:body>
+        <ui:composition 
+            template="templates/layout_templates/layout.xhtml">     
+
+            <ui:param name="wrapperWidth" value="100%"/>
+            <ui:param name="paramForRenderTitle" value="true"/>
+            <ui:param name="paramForRenderLoginAndSearch" value="true"/>
+            <ui:param name="paramForRenderLogin" value="true"/>
+            <ui:param name="paramForRenderSearch" value="true"/>
+            <ui:param name="search" value="true"/>  
+            <ui:param name="paramForRenderTop" value="true"/> 
+            <ui:param name="paramForRenderLogo" value="true"/>
+            <ui:param name="paramForRenderMenuHorz" value="true"/> 
+            <ui:param name="paramForRenderMenuLeft" value="true"/> 
+            <ui:param name="paramForRenderRight" value="true"/>
+            <ui:param name="paramForRenderContent" value="true"/>
+            <ui:param name="paramForRenderBottom" value="true"/>
+            <ui:define name="title1">
+                Computer Store         
+            </ui:define>
+            <ui:define name="login">
+                <h:form id="loginFormId">
+                    <h:form>
+                        <h:inputText value="#{login.user}"/>
+                        <br/>
+                        <h:inputSecret value="#{login.pass}" />
+                        <h:commandButton value="Login" action="#{login.validate()}"/>
+                        <h:outputText value="#{login.message}"/>
+                    </h:form>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="search">
+                <h:form id="searchId">
+                    <h:inputText value="#{searches.search}"/>
+                    <h:commandButton value="Search" action="#{searches.search()}"/>
+
+                </h:form>
+            </ui:define >
+            <ui:define name="logo"/>
+            <ui:define name="top">     
+             <img src="resources/images/site/icon.png" alt="icon"/> Delivering affordable computers <img src="resources/images/site/icon.png" alt="icon"/>
+            </ui:define>
+            <ui:define name="menuHorz">
+                <h:form>
+                    <p:growl id="messages-id" showDetail="true"/>
+                    <p:menubar class= "menu" model="#{menuBar.model}"/> 
+                </h:form>
+            </ui:define>
+            <ui:define name="menuVert">
+                <h:form>
+                    <p:growl id="messages-id" showDetail="true"/>
+                    <p:menu toggleable="true" class= "menu" model="#{menuView.model}" />
+                </h:form>
+            </ui:define>
+            <ui:define name="content">
+                <ui:include src="templates/product_templates/productForSale_1.xhtml">
+                    <ui:param name="titleVar" value="#{itemsBean.i.name}" />
+                    <ui:param name="image" value="#{itemsBean.i.fakeImage}" />
+                    <ui:param name="imageDescription" value="#{itemsBean.i.des}" />
+                </ui:include>
+
+            </ui:define>
+            <ui:define name="right">
+                <h:form>
+                    <h:outputText value="#{searches.result}" escape="false"/>
+                </h:form>
+            </ui:define>
+            <ui:define name="bottom">
+                Brady McBride © 2021. No Rights Reserved.
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

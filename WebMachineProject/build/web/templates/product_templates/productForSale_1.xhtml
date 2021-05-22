@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+
+
+
+    <ui:composition>
+        
+        <h:outputStylesheet library="css" name="imageZoomStyle.css"/>
+        <h:outputScript library="js" name="zoom.js"/> 
+        <div  class="myDiv">
+            <h:form>      
+                <h3>  #{titleVar}</h3>
+                <h:panelGrid columns="3">
+
+                    <img class="img-zoom-container" id="myimage" src="#{image}" width="250" height="300" alt="Phone">
+                        <f:ajax event="mousemove" 
+                                render="myresult" 
+                                onevent="imageZoom('myimage', 'myresult')" />
+                    </img>
+
+                    <h:panelGrid columns="1">
+                        <h:outputText escape="false" 
+                                      value="#{imageDescription}"></h:outputText>
+
+
+                        <div id="myresult" class="img-zoom-result"></div>
+                    </h:panelGrid>
+                    <div >
+                        <h:panelGrid columns="3">
+                            <h:commandButton  value= "previous" image="resources/images/site/previous.png"    action="index"/>
+                            <h:commandButton value="next" title="next product"
+                                             image="resources/images/site/next.png"   
+                                             action="#{productsBean.next()}">
+                                <f:param name ="#{productsBean.nextProduct}"
+                                          value ="#{productsBean.nextProduct}"
+                                          />
+                                
+                            </h:commandButton>
+                            <br/>
+                            <h:commandButton styleClass="lbutton" value="Buy this product"  action="index"></h:commandButton>
+
+
+                        </h:panelGrid>
+                    </div>
+                </h:panelGrid>
+
+            </h:form>
+        </div>
+    </ui:composition>
+
+</html>
+
+

@@ -1,0 +1,7 @@
+#logo {
+    background-image:url("#{resource['images/site/chimp.png']}");
+    margin-right: 0px;
+    width:100px;
+    height:110px;
+    
+}
