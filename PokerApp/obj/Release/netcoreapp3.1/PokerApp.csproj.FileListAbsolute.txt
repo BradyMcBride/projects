@@ -1,0 +1,12 @@
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.exe
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.deps.json
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.runtimeconfig.json
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.runtimeconfig.dev.json
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.dll
+C:\Users\brady\source\repos\PokerApp\PokerApp\bin\Release\netcoreapp3.1\PokerApp.pdb
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.AssemblyInfoInputs.cache
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.AssemblyInfo.cs
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.csproj.CoreCompileInputs.cache
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.dll
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.pdb
+C:\Users\brady\source\repos\PokerApp\PokerApp\obj\Release\netcoreapp3.1\PokerApp.genruntimeconfig.cache
